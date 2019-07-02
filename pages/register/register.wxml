@@ -1,0 +1,28 @@
+<view class='register-wrap' style='width:{{winW}}px;height:{{winH}}px;'>
+  <form bindsubmit='formSubmit'>
+      <view>
+         <input type='text' placeholder='请设置4-20位用户名' name='name' maxlength="20"></input>
+      </view>
+      <view style='position: relative;'>
+        <input password placeholder="请设置6-20位登录密码" name='password' maxlength="20"></input>
+        <switch type="switch" style='position: absolute;right:0px;top:5px;z-index:999;'></switch>
+      </view>
+      <view>
+         <input placeholder='联系人姓名' name="contactor"></input>
+      </view>
+      <view>
+        <input type='text' placeholder='请输入手机号' name='phone' style='width:{{inputW}}px;float:left;box-sizing:border-box;'></input>
+        <button type="{{btnState}}" style='width:90px;float:right;height:40px;font-size:14px;line-height:40px;'>发送验证码</button>
+        <view style="float:none;clear:both;"></view>
+      </view>
+      <view>
+        <input placeholder='短信验证码' name='code'></input>
+      </view>
+      <view style='height:25px;ling-height:25px;margin-bottom:6px;'>
+        <radio-group name="radio" value="{{radio}}">
+           <radio checked="{{radio}}" bindtap='toggleRadio'></radio>我同意《用户注册协议》
+        </radio-group>
+      </view>
+      <view><button form-type='submit' type="{{bthType}}" disabled='{{disabled}}'>注册</button></view>
+  </form>
+</view>

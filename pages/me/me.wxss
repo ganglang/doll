@@ -1,0 +1,19 @@
+.me-wrap{
+  box-sizing: border-box;
+  padding: 10px;
+  padding-top: 42px;
+}
+.me-wrap .hr{
+  height: 0px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-top: 12px;
+  margin-bottom:18px;
+}
+.me-wrap form label text{
+  display: inline-block;
+  margin-right: 12px;
+}
+.me-wrap form label input{
+  margin-bottom:-4px;
+}

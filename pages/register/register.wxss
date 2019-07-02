@@ -1,0 +1,15 @@
+.register-wrap{
+  box-sizing: border-box;
+  padding: 10px;
+  background: #cccccc
+}
+.register-wrap form input{
+  background: #fff;
+  border: 1px solid #dddddd;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}

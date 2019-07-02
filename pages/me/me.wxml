@@ -1,0 +1,35 @@
+<view class='me-wrap'>
+<block wx:if="{{!login}}">
+    <form bindsubmit='formSubmit'>
+    <view>
+      <label for='name' style='height:1.4rem'>
+        <text>账号</text>
+        <input placeholder='用户名/邮箱/手机号' id='name' name="name" style='display:inline-block;' placeholder-style='font-size:14px;color:#ccc;' bindinput='nameInput' value='{{name}}'></input>
+      </label>
+    </view>
+    <view class='hr'></view>
+    <view>
+       <label for='password'  style='height:1.4rem'>
+        <text>密码</text>
+        <input placeholder='请输入密码' id='password' name="password" password='true' style='display:inline-block;'  placeholder-style='font-size:14px;color:#ccc;' bindblur='pwdBlur' value='{{password}}'>
+        </input>
+      </label>
+    </view>
+     <view class='hr'></view>
+    <button form-type='submit' style='margin-top:32px;' disabled='{{disabled}}' type="{{btnState}}">登录</button>
+  </form>
+  <view style='margin-top:24px;'>
+    <view class='wechatLogin' bindtap='wechatLogin' style="width:100px;float:left;">微信一键登录</view>
+    <view class='register' bindtap='register' style="width:146px;float:right;">没有账号?立即注册      </view>
+   <view style='float:none;clear:both;'></view> 
+  </view>
+</block>
+<block wx:if="{{login}}">
+<view>
+  <view class='myProfile'>
+    <view><text bindtap='loginOut'>退出登录</text></view>
+  </view>
+</view>
+
+</block>
+</view>

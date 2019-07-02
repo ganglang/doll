@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/onshow/onshow",
+    "pages/cinema/cinema",
+    "pages/me/me",
+    "pages/detail/detail",
+    "pages/register/register"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1A1A1A",
+    "navigationBarTitleText": "一起去看电影吧",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar":{
+    "selectedColor":"#FFFFFF",
+    "color":"#FFFFFF",
+    "backgroundColor":"#1A1A1A",
+    "borderStyle":"black",
+    "list":[{
+      "pagePath":"pages/onshow/onshow",
+      "text":"上映"
+    },{
+      "pagePath":"pages/cinema/cinema",
+      "text":"影院"
+    },{
+      "pagePath":"pages/me/me",
+      "text":"我看"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,20 @@
+<view class="content-wrap" style='width:{{winWidth}}px;'>
+    <view class='swiper-wrap'>
+      <swiper indicator-dots="{{indicator-dots}}" autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' circular="{{circular}}" style='width:100%;'>
+          <block  wx:for="{{swipers}}" wx:key="{{index}}">
+            <swiper-item >
+              <image src='{{item}}' style="height:100%;width:{{winWidth}}px;" mode='{{imagesMode}}'></image>
+            </swiper-item>
+          </block>
+      </swiper>
+    </view>
+    <view class='moviesList-wrap'>
+      <block wx:for="{{moviesList}}" wx:key="{{item.movieId}}">
+        <view class='moviesItem' style='width:{{movieConW}}px;height:{{movieConH}}px;' bindtap='gotoDetail' id='{{item.movieId}}'>
+           <image src='{{item.pic_url}}' style='width:{{movieImgW}}px;height:{{movieImgH}}px;' mode='{{imagesMode}}'></image>
+          <text>{{item.movieName}}</text>
+        </view>
+      </block>
+      <view style='clear:both;float:none;'></view>
+    </view>
+</view>

@@ -1,0 +1,39 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail-wrap">
+<scroll-view scroll-x="true" style="width:100%;white-space:nowrap;">
+  <view style='display:inline-block;width:{{viewW}}px;' bindtap='switchTab' id="0" class="scroll-box {{currentTab==0?'active':''}}">介绍</view>
+  <view style='display:inline-block;width:{{viewW}}px;' bindtap='switchTab' id="1" class="scroll-box {{currentTab==1?'active':''}}">图片</view>
+  <view style='display:inline-block;width:{{viewW}}px;' bindtap='switchTab' id="2" class="scroll-box {{currentTab==2?'active':''}}">短评</view>
+  <view style='display:inline-block;width:{{viewW}}px;' bindtap='switchTab' id="3" class="scroll-box {{currentTab==3?'active':''}}">影评</view>
+  <view style='display:inline-block;width:{{viewW}}px;' bindtap='switchTab' id="4" class="scroll-box {{currentTab==4?'active':''}}">更多</view>
+</scroll-view>
+<swiper current="{{currentTab}}" style="width:{{winW}}px;height:{{winH}}px;" bindchange="swiperChange">
+  <swiper-item class="intro">
+    <view class='img-wrap' style="width:90px;float:left;">
+      <image src='{{result.poster}}' style='width:90px;height:135px;' mode='aspectFill'></image>
+    </view>
+    <view class='intro-wrap' style='width:{{introW}}px;height:135px;'>
+      <view><text style="font-size:14px;">{{result.title}}</text><text style='color:red;font-size:16px;margin-left:6px;'>{{result.rating}}</text></view>
+      <view><text>{{result.film_locations}}</text></view>
+      <view><text>导演： {{result.directors}}</text></view>
+      <view><text>主演：{{result.actors}}</text> </view>
+    </view>
+    <view style='clear:both;float:none;'></view>
+    <view class='desc-wrap'>
+      {{result.plot_simple}}
+    </view>
+  </swiper-item>
+  <swiper-item>
+    图片
+  </swiper-item>
+  <swiper-item>
+   短评
+  </swiper-item>
+  <swiper-item>
+  影评
+  </swiper-item>
+  <swiper-item>
+  更多
+  </swiper-item>
+</swiper>
+</view>
